@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chart.js Pie Chart with Labels</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+    <style>
+        #chartContainer {
+            width: 600px;
+            height: 600px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body> 
+<div id="chartContainer">
+    <canvas id="pieChart1"></canvas>
+    <canvas id="pieChart2"></canvas>
+    <canvas id="pieChart3"></canvas>
+    <canvas id="pieChart4"></canvas>
+    <canvas id="pieChart5"></canvas>
+    <canvas id="pieChart6"></canvas>
+    <canvas id="pieChart7"></canvas>
+    <canvas id="pieChart8"></canvas>
+    <canvas id="pieChart9"></canvas>
+    <canvas id="pieChart10"></canvas>
+    <canvas id="pieChart11"></canvas>
+    <canvas id="pieChart12"></canvas>
+</div> 
+<script>
+    const ctx1 = document.getElementById('pieChart1').getContext('2d');
+    const ctx2 = document.getElementById('pieChart2').getContext('2d');
+    const ctx3 = document.getElementById('pieChart3').getContext('2d');
+    const ctx4 = document.getElementById('pieChart4').getContext('2d');
+    const ctx5 = document.getElementById('pieChart5').getContext('2d');
+    const ctx6 = document.getElementById('pieChart6').getContext('2d');
+    const ctx7 = document.getElementById('pieChart7').getContext('2d');
+    const ctx8 = document.getElementById('pieChart8').getContext('2d');
+    const ctx9 = document.getElementById('pieChart9').getContext('2d');
+    const ctx10 = document.getElementById('pieChart10').getContext('2d');
+    const ctx11 = document.getElementById('pieChart11').getContext('2d');
+    const ctx12 = document.getElementById('pieChart12').getContext('2d'); 
+    const monthLabels = ["Temperature", "Speed", "Flowrate", "Current", "Power"]; 
+    const monthValues1 = [10, 15, 12, 8, 20];
+    const monthValues2 = [3, 5, 6, 8, 7];
+    const monthValues3 = [10, 15, 12, 8, 20];
+    const monthValues4 = [3, 5, 6, 8, 7];
+    const monthValues5 = [10, 15, 12, 8, 20];
+    const monthValues6 = [3, 5, 6, 8, 7];
+    const monthValues7 = [10, 15, 12, 8, 20];
+    const monthValues8 = [3, 5, 6, 8, 7];
+    const monthValues9 = [10, 15, 12, 8, 20];
+    const monthValues10 = [3, 5, 6, 8, 7];
+    const monthValues11 = [10, 15, 12, 8, 20];
+    const monthValues12 = [3, 5, 6, 8, 7]; 
+    const data1 = { labels: monthLabels, datasets: [{ data: monthValues1, backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"], hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"]}]};
+    const data2 = { labels: monthLabels, datasets: [{ data: monthValues2, backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"], hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"]}]};
+    const data3 = { labels: monthLabels, datasets: [{ data: monthValues3, backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"], hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"]}]};
+    const data4 = { labels: monthLabels, datasets: [{ data: monthValues4, backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"], hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"]}]};
+    const data5 = { labels: monthLabels, datasets: [{ data: monthValues5, backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"], hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"]}]};
+    const data6 = { labels: monthLabels, datasets: [{ data: monthValues6, backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"], hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"]}]};
+    const data7 = { labels: monthLabels, datasets: [{ data: monthValues7, backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"], hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"]}]};
+    const data8 = { labels: monthLabels, datasets: [{ data: monthValues8, backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"], hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"]}]};
+    const data9 = { labels: monthLabels, datasets: [{ data: monthValues9, backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"], hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"]}]};
+    const data10 = { labels: monthLabels, datasets: [{ data: monthValues10, backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"], hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"]}]};
+    const data11 = { labels: monthLabels, datasets: [{ data: monthValues11, backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"], hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"]}]};
+    const data12 = { labels: monthLabels, datasets: [{ data: monthValues12, backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"], hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"]}]};
+      const options1 = { responsive: true, legend: { position: 'right', labels: {  fontSize: 14} }, title: {display: true, text: 'January', fontSize: 18 }, plugins: { datalabels: { color: '#000000', font: { weight: 'bold', size: 20  },  formatter: function(value, context) { return value; }}}}; 
+    const options2 = { responsive: true, legend: { position: 'right', labels: {  fontSize: 14} }, title: {display: true, text: 'February', fontSize: 18 }, plugins: { datalabels: { color: '#000000', font: { weight: 'bold', size: 20  },  formatter: function(value, context) { return value; }}}};  
+    const options3 = { responsive: true, legend: { position: 'right', labels: {  fontSize: 14} }, title: {display: true, text: 'March', fontSize: 18 }, plugins: { datalabels: { color: '#000000', font: { weight: 'bold', size: 20  },  formatter: function(value, context) { return value; }}}};  
+ const options4 = { responsive: true, legend: { position: 'right', labels: {  fontSize: 14} }, title: {display: true, text: 'April', fontSize: 18 }, plugins: { datalabels: { color: '#000000', font: { weight: 'bold', size: 20  },  formatter: function(value, context) { return value; }}}};  
+ const options5 = { responsive: true, legend: { position: 'right', labels: {  fontSize: 14} }, title: {display: true, text: 'May', fontSize: 18 }, plugins: { datalabels: { color: '#000000', font: { weight: 'bold', size: 20  },  formatter: function(value, context) { return value; }}}}; 
+
+ const options6 = { responsive: true, legend: { position: 'right', labels: {  fontSize: 14} }, title: {display: true, text: 'June', fontSize: 18 }, plugins: { datalabels: { color: '#000000', font: { weight: 'bold', size: 20  },  formatter: function(value, context) { return value; }}}}; 
+
+ const options7 = { responsive: true, legend: { position: 'right', labels: {  fontSize: 14} }, title: {display: true, text: 'July', fontSize: 18 }, plugins: { datalabels: { color: '#000000', font: { weight: 'bold', size: 20  },  formatter: function(value, context) { return value; }}}}; 
+
+ const options8 = { responsive: true, legend: { position: 'right', labels: {  fontSize: 14} }, title: {display: true, text: 'August', fontSize: 18 }, plugins: { datalabels: { color: '#000000', font: { weight: 'bold', size: 20  },  formatter: function(value, context) { return value; }}}}; 
+
+ const options9 = { responsive: true, legend: { position: 'right', labels: {  fontSize: 14} }, title: {display: true, text: 'September', fontSize: 18 }, plugins: { datalabels: { color: '#000000', font: { weight: 'bold', size: 20  },  formatter: function(value, context) { return value; }}}}; 
+
+ const options10 = { responsive: true, legend: { position: 'right', labels: {  fontSize: 14} }, title: {display: true, text: 'October', fontSize: 18 }, plugins: { datalabels: { color: '#000000', font: { weight: 'bold', size: 20  },  formatter: function(value, context) { return value; }}}}; 
+
+ const options11 = { responsive: true, legend: { position: 'right', labels: {  fontSize: 14} }, title: {display: true, text: 'November', fontSize: 18 }, plugins: { datalabels: { color: '#000000', font: { weight: 'bold', size: 20  },  formatter: function(value, context) { return value; }}}}; 
+
+ const options12 = { responsive: true, legend: { position: 'right', labels: {  fontSize: 14} }, title: {display: true, text: 'December', fontSize: 18 }, plugins: { datalabels: { color: '#000000', font: { weight: 'bold', size: 20  },  formatter: function(value, context) { return value; }}}};    
+ new Chart(ctx1, { type: 'pie',  data: data1, options: options1,  plugins: [Chart.plugins.getAll().filter(p => p.id === 'datalabels')[0]]    });
+ new Chart(ctx2, { type: 'pie',  data: data2, options: options2,  plugins: [Chart.plugins.getAll().filter(p => p.id === 'datalabels')[0]]    });
+ new Chart(ctx3, { type: 'pie',  data: data3, options: options3,  plugins: [Chart.plugins.getAll().filter(p => p.id === 'datalabels')[0]]    });
+ new Chart(ctx4, { type: 'pie',  data: data4, options: options4,  plugins: [Chart.plugins.getAll().filter(p => p.id === 'datalabels')[0]]    });
+ new Chart(ctx5, { type: 'pie',  data: data5, options: options5,  plugins: [Chart.plugins.getAll().filter(p => p.id === 'datalabels')[0]]    });
+ new Chart(ctx6, { type: 'pie',  data: data6, options: options6,  plugins: [Chart.plugins.getAll().filter(p => p.id === 'datalabels')[0]]    });
+ new Chart(ctx7, { type: 'pie',  data: data7, options: options7,  plugins: [Chart.plugins.getAll().filter(p => p.id === 'datalabels')[0]]    });
+ new Chart(ctx8, { type: 'pie',  data: data8, options: options8,  plugins: [Chart.plugins.getAll().filter(p => p.id === 'datalabels')[0]]    });
+ new Chart(ctx9, { type: 'pie',  data: data9, options: options9,  plugins: [Chart.plugins.getAll().filter(p => p.id === 'datalabels')[0]]    });
+ new Chart(ctx10, { type: 'pie',  data: data10, options: options10,  plugins: [Chart.plugins.getAll().filter(p => p.id === 'datalabels')[0]]    });
+ new Chart(ctx11, { type: 'pie',  data: data11, options: options11,  plugins: [Chart.plugins.getAll().filter(p => p.id === 'datalabels')[0]]    });
+ new Chart(ctx12, { type: 'pie',  data: data12, options: options12,  plugins: [Chart.plugins.getAll().filter(p => p.id === 'datalabels')[0]]    });  
+</script> 
+</body>
+</html>
